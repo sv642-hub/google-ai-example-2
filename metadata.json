@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix RegressionLab - Excel \u0026 Drive Linear Regression",
+  "description": "Upload Excel spreadsheets or connect Google Drive folders to train, evaluate, and visualize linear regression models with interactive predictions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
