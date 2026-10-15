@@ -228,20 +228,20 @@ export const BivariateScatterModal: React.FC<BivariateScatterModalProps> = ({
                 strokeWidth="1.5"
               />
 
-              {/* Linear trendline */}
+              {/* Linear trendline - Navy Blue */}
               {n > 1 && (
                 <line
                   x1={scaleX(lineStart.x)}
                   y1={scaleY(lineStart.y)}
                   x2={scaleX(lineEnd.x)}
                   y2={scaleY(lineEnd.y)}
-                  stroke="#2563eb"
+                  stroke="#1e3a8a"
                   strokeWidth="2.5"
                   strokeDasharray="4 3"
                 />
               )}
 
-              {/* Scatter Points */}
+              {/* Scatter Points - Navy Blue */}
               {points.map((pt, i) => {
                 const cx = scaleX(pt.x);
                 const cy = scaleY(pt.y);
@@ -253,9 +253,9 @@ export const BivariateScatterModal: React.FC<BivariateScatterModalProps> = ({
                     cx={cx}
                     cy={cy}
                     r={isHovered ? 6 : 4}
-                    fill={isHovered ? '#1d4ed8' : '#3b82f6'}
-                    fillOpacity={isHovered ? 1 : 0.65}
-                    stroke={isHovered ? '#ffffff' : '#1e40af'}
+                    fill={isHovered ? '#0e244b' : '#1e3a8a'}
+                    fillOpacity={isHovered ? 1 : 0.75}
+                    stroke={isHovered ? '#ffffff' : '#0a1932'}
                     strokeWidth={isHovered ? 2 : 1}
                     className="cursor-pointer transition-all duration-75"
                     onMouseEnter={() => setHoveredPoint(pt)}

@@ -248,18 +248,18 @@ export const AnalystChatbot: React.FC<AnalystChatbotProps> = ({
 
   return (
     <>
-      {/* Floating Toggle Button */}
+      {/* Floating Toggle Button - Navy Theme */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 active:scale-95 group cursor-pointer border border-white/20"
+          className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 bg-gradient-to-r from-[#071329] to-[#0E234A] hover:from-[#0B1A38] hover:to-[#143264] text-white rounded-full shadow-xl shadow-blue-950/40 hover:shadow-2xl transition-all duration-200 active:scale-95 group cursor-pointer border border-blue-500/30"
         >
           <div className="relative">
-            <Bot className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full" />
+            <Bot className="w-5 h-5 text-sky-300 group-hover:rotate-12 transition-transform" />
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-sky-400 rounded-full animate-ping" />
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-sky-400 rounded-full" />
           </div>
-          <span className="text-sm font-bold tracking-tight">Ask AI Analyst</span>
+          <span className="text-sm font-bold tracking-tight text-white">Ask AI Analyst</span>
           {unreadCount > 0 && (
             <span className="bg-rose-500 text-white text-[10px] font-black px-1.5 py-0.5 rounded-full">
               {unreadCount}
@@ -268,13 +268,13 @@ export const AnalystChatbot: React.FC<AnalystChatbotProps> = ({
         </button>
       )}
 
-      {/* Slide-out / Floating Chat Window */}
+      {/* Slide-out / Floating Chat Window - Navy Theme */}
       {isOpen && (
         <div className="fixed bottom-6 right-6 z-50 w-[92vw] sm:w-[480px] h-[620px] max-h-[85vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200">
           {/* Header */}
-          <div className="p-4 bg-gradient-to-r from-slate-900 to-slate-800 text-white flex items-center justify-between">
+          <div className="p-4 bg-gradient-to-r from-[#061226] to-[#0D2146] text-white flex items-center justify-between border-b border-blue-900/40">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 border border-blue-400/30 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-blue-950 text-sky-400 border border-blue-600/30 flex items-center justify-center">
                 <Bot className="w-5 h-5" />
               </div>
               <div>
@@ -308,7 +308,7 @@ export const AnalystChatbot: React.FC<AnalystChatbotProps> = ({
                 className="bg-slate-800 border border-slate-700 text-slate-300 text-[10px] rounded px-1.5 py-1 font-medium focus:outline-hidden"
                 title="Select Gemini Model Tier"
               >
-                <option value="flash">Gemini 3.5 Flash (Balanced)</option>
+                <option value="flash">Gemini 3.8 Flash (Balanced)</option>
                 <option value="fast">Gemini 3.1 Flash-Lite (Fast)</option>
                 <option value="pro">Gemini 3.1 Pro (Deep STEM)</option>
               </select>
@@ -384,7 +384,7 @@ export const AnalystChatbot: React.FC<AnalystChatbotProps> = ({
                 <div
                   className={`max-w-[85%] rounded-2xl p-3.5 shadow-2xs leading-relaxed ${
                     msg.role === 'user'
-                      ? 'bg-blue-600 text-white rounded-tr-xs'
+                      ? 'bg-[#0E244B] text-white border border-blue-800/40 rounded-tr-xs'
                       : 'bg-white text-slate-800 border border-slate-200 rounded-tl-xs'
                   }`}
                 >
@@ -393,7 +393,7 @@ export const AnalystChatbot: React.FC<AnalystChatbotProps> = ({
                   </div>
                   <div
                     className={`mt-1.5 text-[9px] flex items-center gap-2 ${
-                      msg.role === 'user' ? 'text-blue-200 justify-end' : 'text-slate-400 justify-between'
+                      msg.role === 'user' ? 'text-sky-200 justify-end' : 'text-slate-400 justify-between'
                     }`}
                   >
                     <span>
@@ -468,7 +468,7 @@ export const AnalystChatbot: React.FC<AnalystChatbotProps> = ({
               className={`p-2.5 rounded-xl transition font-bold shrink-0 ${
                 !inputValue.trim() || isLoading
                   ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                  : 'bg-blue-600 hover:bg-blue-700 text-white shadow-md active:scale-95 cursor-pointer'
+                  : 'bg-[#0E2044] hover:bg-[#183973] text-white shadow-md active:scale-95 cursor-pointer'
               }`}
             >
               <Send className="w-4 h-4" />

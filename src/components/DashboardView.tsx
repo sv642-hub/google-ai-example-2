@@ -149,50 +149,50 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   if (!dataset) {
     return (
       <div className="space-y-8 animate-in fade-in duration-200">
-        {/* Welcome Hero Banner - Bright & Radiant Design */}
-        <div className="relative rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-700 text-white p-6 sm:p-8 lg:p-10 overflow-hidden shadow-2xl shadow-indigo-500/20 border border-white/20">
-          {/* Radiant ambient light highlights */}
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-cyan-300/35 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-fuchsia-400/25 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 bg-amber-300/20 rounded-full blur-2xl pointer-events-none" />
+        {/* Welcome Hero Banner - Deep Luxurious Navy Blue Design */}
+        <div className="relative rounded-3xl bg-gradient-to-br from-[#061226] via-[#0D2146] to-[#143366] text-white p-6 sm:p-8 lg:p-10 overflow-hidden shadow-2xl shadow-[#040C1A]/60 border border-blue-900/40">
+          {/* Radiant ambient light highlights - Navy, Sapphire & Cyan */}
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-sky-400/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-blue-700/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 bg-indigo-900/30 rounded-full blur-2xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             {/* Left Content Column */}
             <div className="lg:col-span-7 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs font-semibold tracking-wide shadow-xs">
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                <span>Interactive Analytics & Statistical Modeling</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/70 backdrop-blur-md border border-blue-700/50 text-sky-200 text-xs font-semibold tracking-wide shadow-xs">
+                <Sparkles className="w-3.5 h-3.5 text-sky-300" />
+                <span>Interactive Analytics &amp; Statistical Modeling</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black tracking-tight text-white leading-[1.15] drop-shadow-xs">
                 Instant Intelligence on Your Spreadsheets
               </h2>
 
-              <p className="text-sm sm:text-base text-blue-50/95 leading-relaxed max-w-xl font-normal">
-                Upload any Excel (<code className="font-mono text-cyan-200 bg-white/10 px-1 py-0.5 rounded">.xlsx</code>, <code className="font-mono text-cyan-200 bg-white/10 px-1 py-0.5 rounded">.xls</code>) or <code className="font-mono text-cyan-200 bg-white/10 px-1 py-0.5 rounded">.csv</code> spreadsheet to immediately unlock automated statistical profiling, Pearson correlation heatmaps, collinearity checks, OLS linear regression, and K-Means segmentation.
+              <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-xl font-normal">
+                Upload any Excel (<code className="font-mono text-sky-300 bg-blue-950/80 px-1 py-0.5 rounded border border-blue-800/40">.xlsx</code>, <code className="font-mono text-sky-300 bg-blue-950/80 px-1 py-0.5 rounded border border-blue-800/40">.xls</code>) or <code className="font-mono text-sky-300 bg-blue-950/80 px-1 py-0.5 rounded border border-blue-800/40">.csv</code> spreadsheet to immediately unlock automated statistical profiling, Pearson correlation heatmaps, collinearity checks, OLS linear regression, and K-Means segmentation.
               </p>
 
               {/* Curated Sample Datasets */}
               <div className="pt-2 space-y-2">
-                <span className="text-xs text-blue-100 font-semibold uppercase tracking-wider block">
+                <span className="text-xs text-sky-200 font-semibold uppercase tracking-wider block">
                   Quick-load curated dataset:
                 </span>
                 <div className="flex flex-wrap items-center gap-2.5">
                   <button
                     onClick={() => onLoadSample('housing')}
-                    className="px-3.5 py-2 text-xs font-bold bg-white text-slate-900 rounded-xl hover:bg-blue-50 transition shadow-md shadow-black/10 flex items-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                    className="px-3.5 py-2 text-xs font-bold bg-white text-[#0A162B] rounded-xl hover:bg-sky-50 transition shadow-md shadow-black/20 flex items-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <span>🏡 Housing Prices (Regression)</span>
                   </button>
                   <button
                     onClick={() => onLoadSample('sales')}
-                    className="px-3.5 py-2 text-xs font-bold bg-cyan-400 text-slate-950 rounded-xl hover:bg-cyan-300 transition shadow-md shadow-cyan-500/20 flex items-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                    className="px-3.5 py-2 text-xs font-bold bg-[#143468] text-white rounded-xl hover:bg-[#1B4385] border border-blue-600/50 transition shadow-md shadow-blue-950/30 flex items-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
                   >
-                    <span>📈 Ad Spend & Revenue</span>
+                    <span>📈 Ad Spend &amp; Revenue</span>
                   </button>
                   <button
                     onClick={() => onLoadSample('customer')}
-                    className="px-3.5 py-2 text-xs font-bold bg-amber-300 text-slate-950 rounded-xl hover:bg-amber-200 transition shadow-md shadow-amber-500/20 flex items-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                    className="px-3.5 py-2 text-xs font-bold bg-[#1D4A94] text-white rounded-xl hover:bg-[#255DB5] border border-blue-500/50 transition shadow-md shadow-blue-950/30 flex items-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <span>👥 Customer Segments</span>
                   </button>
@@ -201,24 +201,24 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
               {/* Upload & Drive Actions */}
               <div className="pt-1 flex flex-wrap items-center gap-3">
-                <span className="text-xs text-blue-100 font-semibold uppercase tracking-wider block">
+                <span className="text-xs text-sky-200 font-semibold uppercase tracking-wider block">
                   Or import your data:
                 </span>
                 <div className="flex flex-wrap items-center gap-2.5">
                   {onTriggerUpload && (
                     <button
                       onClick={onTriggerUpload}
-                      className="px-3.5 py-2 text-xs font-bold bg-white/20 hover:bg-white/30 text-white rounded-xl transition border border-white/40 shadow-sm backdrop-blur-md flex items-center gap-2 cursor-pointer"
+                      className="px-3.5 py-2 text-xs font-bold bg-blue-950/70 hover:bg-blue-900/80 text-white rounded-xl transition border border-blue-700/50 shadow-sm backdrop-blur-md flex items-center gap-2 cursor-pointer"
                     >
-                      <FileSpreadsheet className="w-4 h-4 text-cyan-200" />
+                      <FileSpreadsheet className="w-4 h-4 text-sky-300" />
                       <span>Upload Spreadsheet</span>
                     </button>
                   )}
                   <button
                     onClick={onOpenDriveModal}
-                    className="px-3.5 py-2 text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-white rounded-xl transition shadow-md shadow-emerald-600/30 flex items-center gap-2 cursor-pointer"
+                    className="px-3.5 py-2 text-xs font-bold bg-[#173D7A] hover:bg-[#1F4F9C] text-white rounded-xl transition shadow-md shadow-blue-950/40 border border-blue-500/40 flex items-center gap-2 cursor-pointer"
                   >
-                    <HardDrive className="w-4 h-4" />
+                    <HardDrive className="w-4 h-4 text-sky-300" />
                     <span>Browse Google Drive</span>
                   </button>
                 </div>
@@ -232,10 +232,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
         </div>
 
-        {/* Feature Highlights Grid with Bright Visual Accents */}
+        {/* Feature Highlights Grid with Navy Visual Accents */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-md transition space-y-3 relative overflow-hidden group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 text-white flex items-center justify-center font-bold shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#0C1D3B] to-[#183973] text-sky-300 flex items-center justify-center font-bold shadow-lg shadow-blue-950/20 group-hover:scale-105 transition-transform">
               <BarChart3 className="w-5 h-5" />
             </div>
             <h3 className="text-base font-bold text-slate-900">Automated Statistical Profiling</h3>
@@ -246,10 +246,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
 
           <div className="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-md transition space-y-3 relative overflow-hidden group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-400 text-white flex items-center justify-center font-bold shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#0C1D3B] to-[#183973] text-sky-300 flex items-center justify-center font-bold shadow-lg shadow-blue-950/20 group-hover:scale-105 transition-transform">
               <TrendingUp className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-slate-900">Correlation Heatmap & Collinearity</h3>
+            <h3 className="text-base font-bold text-slate-900">Correlation Heatmap &amp; Collinearity</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               Interactive Pearson correlation matrix flagging high collinearity (|r| &ge; 0.85).
               Click any cell to inspect paired scatter plots and OLS trendlines.
@@ -257,10 +257,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
 
           <div className="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-md transition space-y-3 relative overflow-hidden group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-white flex items-center justify-center font-bold shadow-lg shadow-emerald-500/25 group-hover:scale-105 transition-transform">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#0C1D3B] to-[#183973] text-sky-300 flex items-center justify-center font-bold shadow-lg shadow-blue-950/20 group-hover:scale-105 transition-transform">
               <Zap className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-slate-900">1-Click Regression & Simulator</h3>
+            <h3 className="text-base font-bold text-slate-900">1-Click Regression &amp; Simulator</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               Fit multiple linear regression models with LU decomposition, evaluate R&sup2; and
               p-values, and test what-if scenarios in an interactive real-time simulator.
@@ -271,20 +271,20 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
     );
   }
 
-  // Color helper for correlation heatmap cells
+  // Color helper for correlation heatmap cells - Navy Blue Palette
   const getCorrBgColor = (r: number) => {
     if (isNaN(r)) return 'bg-slate-100 text-slate-400';
-    if (r === 1) return 'bg-blue-600 text-white font-bold';
+    if (r === 1) return 'bg-[#0E2044] text-white font-bold';
     if (r > 0) {
-      if (r >= 0.8) return 'bg-blue-500 text-white font-semibold';
-      if (r >= 0.6) return 'bg-blue-400 text-white';
-      if (r >= 0.4) return 'bg-blue-200 text-blue-900';
-      if (r >= 0.2) return 'bg-blue-100 text-blue-800';
-      return 'bg-blue-50/60 text-slate-700';
+      if (r >= 0.8) return 'bg-[#153468] text-white font-semibold';
+      if (r >= 0.6) return 'bg-[#1D4A94] text-white';
+      if (r >= 0.4) return 'bg-[#6B9AD4] text-[#071328]';
+      if (r >= 0.2) return 'bg-[#C2D6EE] text-[#0A1D3D]';
+      return 'bg-[#EBF2FA] text-slate-700';
     } else {
       const abs = Math.abs(r);
-      if (abs >= 0.8) return 'bg-rose-500 text-white font-semibold';
-      if (abs >= 0.6) return 'bg-rose-400 text-white';
+      if (abs >= 0.8) return 'bg-rose-600 text-white font-semibold';
+      if (abs >= 0.6) return 'bg-rose-500 text-white';
       if (abs >= 0.4) return 'bg-rose-200 text-rose-900';
       if (abs >= 0.2) return 'bg-rose-100 text-rose-800';
       return 'bg-rose-50/60 text-slate-700';
@@ -293,17 +293,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
   return (
     <div className="space-y-6 animate-in fade-in duration-150">
-      {/* Top Context & Action Bar with Bright Radiant Accent */}
+      {/* Top Context & Action Bar with Navy Accent */}
       <div className="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden">
-        <div className="h-1.5 w-full bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-600" />
+        <div className="h-1.5 w-full bg-gradient-to-r from-sky-400 via-blue-700 to-[#061021]" />
         <div className="p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 text-white flex items-center justify-center shadow-md shadow-blue-500/25 shrink-0">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#0C1D3B] to-[#183973] text-sky-300 flex items-center justify-center shadow-md shadow-blue-950/20 shrink-0">
               <FileSpreadsheet className="w-5 h-5" />
             </div>
             <div>
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-[11px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-800">
+                <span className="text-[11px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#0E2044] text-sky-200 border border-blue-800/40">
                   Active Dataset
                 </span>
                 <span className="text-slate-300">·</span>
@@ -346,17 +346,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   onAutoTrainRegression();
                   confetti({ particleCount: 35, spread: 50, origin: { y: 0.8 } });
                 }}
-                className="flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs font-bold rounded-xl shadow-md shadow-blue-500/25 transition cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                className="flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-[#0C1D3B] to-[#17376D] hover:from-[#11274F] hover:to-[#1E4383] text-white text-xs font-bold rounded-xl shadow-md shadow-blue-950/25 transition cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
               >
-                <Zap className="w-3.5 h-3.5 text-amber-300" />
+                <Zap className="w-3.5 h-3.5 text-sky-300" />
                 <span>Auto-Train Regression</span>
               </button>
             ) : (
               <button
                 onClick={onNavigateToRegression}
-                className="flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 text-blue-700 border border-blue-200 text-xs font-bold rounded-xl transition cursor-pointer shadow-xs"
+                className="flex items-center gap-1.5 px-3.5 py-2 bg-blue-50/80 hover:bg-blue-100 text-[#0E2044] border border-blue-200 text-xs font-bold rounded-xl transition cursor-pointer shadow-xs"
               >
-                <TrendingUp className="w-3.5 h-3.5" />
+                <TrendingUp className="w-3.5 h-3.5 text-blue-700" />
                 <span>Regression Model (R² = {regressionModel.rSquared.toFixed(2)})</span>
               </button>
             )}
@@ -387,19 +387,19 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             {/* Browse Drive */}
             <button
               onClick={onOpenDriveModal}
-              className="flex items-center gap-1.5 px-3 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-emerald-700 text-xs font-semibold rounded-xl shadow-xs transition cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-[#0F2248] text-xs font-semibold rounded-xl shadow-xs transition cursor-pointer"
               title="Browse Google Drive spreadsheets"
             >
-              <HardDrive className="w-3.5 h-3.5 text-emerald-600" />
+              <HardDrive className="w-3.5 h-3.5 text-sky-600" />
               <span className="hidden sm:inline">Drive</span>
             </button>
 
-            {/* AI Briefing with Vibrant Violet Gradient */}
+            {/* AI Briefing with Navy Blue Gradient */}
             <button
               onClick={onOpenAiAnalyst}
-              className="flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white text-xs font-bold rounded-xl shadow-md shadow-violet-500/25 transition cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+              className="flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-[#0E2044] to-[#183973] hover:from-[#143264] hover:to-[#20498A] text-white text-xs font-bold rounded-xl shadow-md shadow-blue-950/25 transition cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+              <Sparkles className="w-3.5 h-3.5 text-sky-300" />
               <span>AI Briefing</span>
             </button>
           </div>
@@ -534,19 +534,19 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         <nav className="flex items-center gap-2 overflow-x-auto pb-px">
           <button
             onClick={() => setActiveTab('overview')}
-            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap ${
+            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap cursor-pointer ${
               activeTab === 'overview'
-                ? 'border-blue-600 text-blue-600 bg-white shadow-2xs'
+                ? 'border-[#0F2248] text-[#0F2248] bg-white shadow-2xs'
                 : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
             }`}
           >
-            Overview & Key Drivers
+            Overview &amp; Key Drivers
           </button>
           <button
             onClick={() => setActiveTab('correlations')}
-            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap flex items-center gap-1.5 ${
+            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'correlations'
-                ? 'border-blue-600 text-blue-600 bg-white shadow-2xs'
+                ? 'border-[#0F2248] text-[#0F2248] bg-white shadow-2xs'
                 : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
             }`}
           >
@@ -557,9 +557,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </button>
           <button
             onClick={() => setActiveTab('distributions')}
-            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap ${
+            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap cursor-pointer ${
               activeTab === 'distributions'
-                ? 'border-blue-600 text-blue-600 bg-white shadow-2xs'
+                ? 'border-[#0F2248] text-[#0F2248] bg-white shadow-2xs'
                 : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
             }`}
           >
@@ -567,9 +567,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </button>
           <button
             onClick={() => setActiveTab('models')}
-            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap ${
+            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap cursor-pointer ${
               activeTab === 'models'
-                ? 'border-blue-600 text-blue-600 bg-white shadow-2xs'
+                ? 'border-[#0F2248] text-[#0F2248] bg-white shadow-2xs'
                 : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
             }`}
           >
@@ -577,9 +577,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </button>
           <button
             onClick={() => setActiveTab('quality')}
-            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap flex items-center gap-1.5 ${
+            className={`px-4 py-2.5 text-xs font-bold rounded-t-xl transition border-b-2 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'quality'
-                ? 'border-blue-600 text-blue-600 bg-white shadow-2xs'
+                ? 'border-[#0F2248] text-[#0F2248] bg-white shadow-2xs'
                 : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
             }`}
           >

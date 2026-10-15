@@ -124,7 +124,7 @@ export const GoogleDrivePickerModal: React.FC<GoogleDrivePickerModalProps> = ({
         {/* Header */}
         <div className="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600/10 flex items-center justify-center text-blue-600 font-semibold shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-[#0F2248]/10 flex items-center justify-center text-[#0F2248] font-semibold shadow-xs">
               <HardDrive className="w-5 h-5" />
             </div>
             <div>
@@ -192,7 +192,7 @@ export const GoogleDrivePickerModal: React.FC<GoogleDrivePickerModalProps> = ({
                       }}
                       className={`text-xs sm:text-sm font-medium px-2 py-1 rounded-md transition ${
                         i === folderHistory.length - 1
-                          ? 'bg-blue-50 text-blue-700 font-semibold'
+                          ? 'bg-[#0E2044] text-white font-semibold'
                           : 'text-slate-600 hover:bg-slate-100'
                       }`}
                     >
@@ -308,7 +308,7 @@ export const GoogleDrivePickerModal: React.FC<GoogleDrivePickerModalProps> = ({
                             className={`px-3 py-1.5 rounded-lg text-xs font-semibold shadow-xs transition flex items-center gap-1.5 ${
                               isBusy
                                 ? 'bg-blue-100 text-blue-700 animate-pulse'
-                                : 'bg-white border border-slate-200 text-slate-700 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600'
+                                : 'bg-white border border-slate-200 text-slate-700 group-hover:bg-[#0E2044] group-hover:text-white group-hover:border-[#0E2044]'
                             }`}
                           >
                             {isBusy ? (

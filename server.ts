@@ -30,13 +30,19 @@ app.post('/api/analyst/chat', async (req, res) => {
       return res.status(400).json({ error: 'messages array is required' });
     }
 
-    // Default to gemini-3.5-flash for general analytics tasks, or gemini-3.1-pro-preview / gemini-3.1-flash-lite if requested
+    if (!process.env.GEMINI_API_KEY) {
+      return res.status(500).json({
+        error: 'GEMINI_API_KEY environment variable is not configured. Please set GEMINI_API_KEY in your environment.',
+      });
+    }
+
+    // Default to gemini-3.8-flash for general analytics tasks, or gemini-3.1-pro-preview / gemini-3.1-flash-lite if requested
     const selectedModel =
       modelChoice === 'pro'
         ? 'gemini-3.1-pro-preview'
         : modelChoice === 'fast'
         ? 'gemini-3.1-flash-lite'
-        : 'gemini-3.5-flash';
+        : 'gemini-3.8-flash';
 
     const systemInstruction = `You are a senior statistical consultant and expert data science analyst specializing in Econometrics, Linear Regression (OLS), and Unsupervised Clustering (K-Means).
 

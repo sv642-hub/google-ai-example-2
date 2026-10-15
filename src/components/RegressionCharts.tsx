@@ -145,20 +145,20 @@ export const SimpleScatterPlot: React.FC<ScatterPlotProps> = ({
             y1={scaleY(line[0].y)}
             x2={scaleX(line[1].x)}
             y2={scaleY(line[1].y)}
-            stroke="#2563eb"
+            stroke="#1e3a8a"
             strokeWidth="2.5"
             strokeLinecap="round"
           />
         )}
 
-        {/* Scatter Points */}
+        {/* Scatter Points - Navy Theme */}
         {data.map((pt, i) => (
           <circle
             key={i}
             cx={scaleX(pt.x)}
             cy={scaleY(pt.y)}
             r={data.length > 200 ? 3 : 4}
-            className="fill-blue-600/70 stroke-white stroke-[1.5] hover:fill-rose-500 transition-colors"
+            className="fill-[#1e3a8a]/75 stroke-white stroke-[1.5] hover:fill-sky-400 transition-colors"
           >
             <title>{`(${xLabel}: ${pt.x}, ${yLabel}: ${pt.y})`}</title>
           </circle>
@@ -192,12 +192,12 @@ export const SimpleScatterPlot: React.FC<ScatterPlotProps> = ({
           height="48"
           rx="6"
           fill="#f8fafc"
-          stroke="#e2e8f0"
+          stroke="#cbd5e1"
         />
         <text
           x={width - margin.right - 170}
           y={margin.top + 24}
-          className="text-[11px] font-mono fill-blue-700 font-medium"
+          className="text-[11px] font-mono fill-[#0f2248] font-bold"
         >
           Ŷ = {slope.toFixed(3)}X + {intercept.toFixed(3)}
         </text>
@@ -278,14 +278,14 @@ export const ActualVsPredictedScatter: React.FC<{
           strokeWidth="1.5"
         />
 
-        {/* Data points */}
+        {/* Data points - Navy Theme */}
         {data.map((pt, i) => (
           <circle
             key={i}
             cx={scale(pt.actual)}
             cy={scaleY(pt.predicted)}
             r={data.length > 200 ? 3 : 4}
-            className="fill-indigo-600/70 stroke-white stroke-[1.5] hover:fill-amber-500 transition-colors"
+            className="fill-[#1e3a8a]/75 stroke-white stroke-[1.5] hover:fill-sky-400 transition-colors"
           >
             <title>{`Actual: ${pt.actual.toFixed(3)}, Predicted: ${pt.predicted.toFixed(3)}, Residual: ${pt.residual.toFixed(3)}`}</title>
           </circle>

@@ -290,43 +290,43 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
-      {/* Radiant Bright Accent Stripe on Top */}
-      <div className="h-1.5 w-full bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-600 shadow-xs" />
+      {/* Radiant Navy & Ice Blue Stripe on Top */}
+      <div className="h-1.5 w-full bg-gradient-to-r from-sky-400 via-blue-700 to-[#061021] shadow-xs" />
 
-      {/* Top Navigation */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-2xs">
+      {/* Top Navigation - Dark Navy Blue */}
+      <header className="sticky top-0 z-40 bg-[#0A162B] border-b border-[#1A2E54] text-white shadow-lg shadow-[#050C1A]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-500 via-sky-500 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-sky-500/25 ring-2 ring-white">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#0F2248] via-[#1A3870] to-[#2B5CA8] flex items-center justify-center text-white shadow-lg shadow-blue-950/40 ring-1 ring-blue-400/30">
               {analysisMode === 'dashboard' ? (
-                <LayoutDashboard className="w-5 h-5" />
+                <LayoutDashboard className="w-5 h-5 text-sky-200" />
               ) : analysisMode === 'regression' ? (
-                <TrendingUp className="w-5 h-5" />
+                <TrendingUp className="w-5 h-5 text-sky-200" />
               ) : (
-                <Layers className="w-5 h-5" />
+                <Layers className="w-5 h-5 text-sky-200" />
               )}
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-lg font-black text-slate-900 tracking-tight">RegressionLab</h1>
-                <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-xs">
-                  ML Analytics Studio
+                <h1 className="text-lg font-black text-white tracking-tight">RegressionLab</h1>
+                <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-[#12254A] text-sky-200 border border-blue-500/30 shadow-xs">
+                  Navy ML Studio
                 </span>
               </div>
-              <p className="text-xs text-slate-500 hidden sm:block">
-                Excel & Google Drive Linear Regression & K-Means Clustering
+              <p className="text-xs text-slate-300 hidden sm:block">
+                Excel &amp; Google Drive Linear Regression &amp; K-Means Clustering
               </p>
             </div>
           </div>
 
-          {/* Mode Switcher Tabs */}
-          <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+          {/* Mode Switcher Tabs - Navy Blue Styling */}
+          <div className="flex items-center bg-[#061021] p-1 rounded-xl border border-[#162B50]">
             <button
               onClick={() => setAnalysisMode('dashboard')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer ${
                 analysisMode === 'dashboard'
-                  ? 'bg-white text-blue-600 shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-[#163363] text-white shadow-xs border border-blue-400/30'
+                  : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
               <LayoutDashboard className="w-3.5 h-3.5" />
@@ -334,10 +334,10 @@ export default function App() {
             </button>
             <button
               onClick={() => setAnalysisMode('regression')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer ${
                 analysisMode === 'regression'
-                  ? 'bg-white text-blue-600 shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-[#163363] text-white shadow-xs border border-blue-400/30'
+                  : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
               <TrendingUp className="w-3.5 h-3.5" />
@@ -345,10 +345,10 @@ export default function App() {
             </button>
             <button
               onClick={() => setAnalysisMode('clustering')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer ${
                 analysisMode === 'clustering'
-                  ? 'bg-white text-indigo-600 shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-[#163363] text-white shadow-xs border border-blue-400/30'
+                  : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
               <Layers className="w-3.5 h-3.5" />
@@ -357,22 +357,22 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-3">
-            {/* Google Drive Status Button */}
+            {/* Google Drive Status Button - Navy Styled */}
             {user ? (
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setIsDriveModalOpen(true)}
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-2xs transition"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-blue-800/60 bg-[#0E1F3D] hover:bg-[#152B52] text-slate-100 text-xs font-semibold shadow-xs transition cursor-pointer"
                 >
-                  <HardDrive className="w-4 h-4 text-emerald-600" />
+                  <HardDrive className="w-4 h-4 text-sky-400" />
                   <span className="hidden sm:inline">Browse Drive</span>
                   <span className="sm:hidden">Drive</span>
                 </button>
-                <div className="flex items-center gap-1.5 pl-2 border-l border-slate-200">
+                <div className="flex items-center gap-1.5 pl-2 border-l border-blue-900/60">
                   {user.photoURL ? (
-                    <img src={user.photoURL} alt={user.displayName} className="w-7 h-7 rounded-full" />
+                    <img src={user.photoURL} alt={user.displayName} className="w-7 h-7 rounded-full ring-1 ring-sky-400/50" />
                   ) : (
-                    <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold">
+                    <div className="w-7 h-7 rounded-full bg-[#18366A] text-sky-200 flex items-center justify-center text-xs font-bold ring-1 ring-blue-500/40">
                       {user.displayName ? user.displayName[0] : 'G'}
                     </div>
                   )}
@@ -381,7 +381,7 @@ export default function App() {
             ) : (
               <button
                 onClick={() => setIsDriveModalOpen(true)}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium shadow-xs transition hover:border-slate-400"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-blue-800/60 bg-[#0E1F3D] hover:bg-[#152B52] text-slate-100 text-xs font-medium shadow-xs transition hover:border-blue-600 cursor-pointer"
               >
                 <svg className="w-4 h-4" viewBox="0 0 48 48">
                   <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
@@ -445,11 +445,11 @@ export default function App() {
 
             {/* Step 1: Upload or Connect Google Drive */}
             <section className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden transition-all">
-              <div className="h-1 w-full bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-600" />
+              <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-blue-700 to-[#061021]" />
               <div className="p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-100">
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 text-white font-bold flex items-center justify-center text-sm shadow-sm shadow-blue-500/25">
+                    <span className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#0F2248] to-[#1E3F78] text-white font-bold flex items-center justify-center text-sm shadow-sm shadow-blue-950/20">
                       1
                     </span>
                 <div>
@@ -618,7 +618,7 @@ export default function App() {
           <section className="bg-white rounded-2xl border border-slate-200/80 shadow-xs p-6">
             <div className="flex items-center justify-between pb-5 border-b border-slate-100">
               <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 font-bold flex items-center justify-center text-sm border border-blue-100">
+                <span className="w-8 h-8 rounded-full bg-[#0F2248] text-sky-300 font-bold flex items-center justify-center text-sm border border-blue-900">
                   2
                 </span>
                 <div>
@@ -637,7 +637,7 @@ export default function App() {
                 className={`px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-sm transition ${
                   !targetVariable || predictorVariables.length === 0
                     ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                    : 'bg-blue-600 hover:bg-blue-700 text-white hover:shadow-md active:scale-98 cursor-pointer'
+                    : 'bg-[#0F2347] hover:bg-[#183973] text-white hover:shadow-md active:scale-98 cursor-pointer'
                 }`}
               >
                 <Play className="w-4 h-4 fill-white" />
@@ -795,7 +795,7 @@ export default function App() {
           <section className="bg-white rounded-2xl border border-slate-200/80 shadow-xs p-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-100">
               <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 font-bold flex items-center justify-center text-sm border border-indigo-100">
+                <span className="w-8 h-8 rounded-full bg-[#0F2248] text-sky-300 font-bold flex items-center justify-center text-sm border border-blue-900">
                   2
                 </span>
                 <div>
@@ -814,7 +814,7 @@ export default function App() {
                 className={`px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-sm transition ${
                   clusterFeatures.length === 0
                     ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                    : 'bg-indigo-600 hover:bg-indigo-700 text-white hover:shadow-md active:scale-98 cursor-pointer'
+                    : 'bg-[#0F2347] hover:bg-[#183973] text-white hover:shadow-md active:scale-98 cursor-pointer'
                 }`}
               >
                 <Play className="w-4 h-4 fill-white" />
@@ -828,10 +828,10 @@ export default function App() {
                 <div>
                   <div className="flex items-center justify-between mb-1.5">
                     <label className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-indigo-600" />
+                      <span className="w-2 h-2 rounded-full bg-[#0F2347]" />
                       Number of Clusters (k)
                     </label>
-                    <span className="text-base font-black text-indigo-600 font-mono">
+                    <span className="text-base font-black text-[#0F2347] font-mono">
                       k = {clusterK}
                     </span>
                   </div>
@@ -848,7 +848,7 @@ export default function App() {
                     max="8"
                     value={clusterK}
                     onChange={(e) => setClusterK(parseInt(e.target.value, 10))}
-                    className="w-full accent-indigo-600 cursor-pointer"
+                    className="w-full accent-[#0F2347] cursor-pointer"
                   />
 
                   {/* Quick Select Buttons */}
@@ -857,9 +857,9 @@ export default function App() {
                       <button
                         key={num}
                         onClick={() => setClusterK(num)}
-                        className={`flex-1 py-1.5 text-xs font-bold rounded-lg border transition ${
+                        className={`flex-1 py-1.5 text-xs font-bold rounded-lg border transition cursor-pointer ${
                           clusterK === num
-                            ? 'bg-indigo-600 border-indigo-600 text-white shadow-2xs'
+                            ? 'bg-[#0F2347] border-[#0F2347] text-white shadow-2xs'
                             : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-100'
                         }`}
                       >
@@ -1001,28 +1001,28 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Key Metric KPI Cards */}
+              {/* Key Metric KPI Cards - Navy Theme */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
-                <div className="p-4 rounded-xl bg-blue-50/60 border border-blue-100">
-                  <span className="text-[11px] font-bold text-blue-700 uppercase tracking-wider">
+                <div className="p-4 rounded-xl bg-[#0F2248]/10 border border-[#1E3F78]/30">
+                  <span className="text-[11px] font-bold text-[#0F2248] uppercase tracking-wider">
                     R-Squared (R²)
                   </span>
-                  <div className="text-2xl font-black text-blue-900 mt-1">
+                  <div className="text-2xl font-black text-[#0A162B] mt-1">
                     {(modelResult.rSquared * 100).toFixed(1)}%
                   </div>
-                  <p className="text-[10px] text-blue-600 mt-0.5">
+                  <p className="text-[10px] text-blue-700 mt-0.5">
                     Variance explained by model
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-indigo-50/60 border border-indigo-100">
-                  <span className="text-[11px] font-bold text-indigo-700 uppercase tracking-wider">
+                <div className="p-4 rounded-xl bg-[#0F2248]/10 border border-[#1E3F78]/30">
+                  <span className="text-[11px] font-bold text-[#0F2248] uppercase tracking-wider">
                     Adjusted R²
                   </span>
-                  <div className="text-2xl font-black text-indigo-900 mt-1">
+                  <div className="text-2xl font-black text-[#0A162B] mt-1">
                     {(modelResult.adjustedRSquared * 100).toFixed(1)}%
                   </div>
-                  <p className="text-[10px] text-indigo-600 mt-0.5">
+                  <p className="text-[10px] text-blue-700 mt-0.5">
                     Penalized for predictor count
                   </p>
                 </div>
@@ -1057,9 +1057,9 @@ export default function App() {
             <div className="flex border-b border-slate-200 px-6 gap-6 bg-white overflow-x-auto">
               <button
                 onClick={() => setRegressionTab('summary')}
-                className={`py-3 text-xs font-bold border-b-2 transition flex items-center gap-1.5 whitespace-nowrap ${
+                className={`py-3 text-xs font-bold border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${
                   regressionTab === 'summary'
-                    ? 'border-blue-600 text-blue-600'
+                    ? 'border-[#0F2248] text-[#0F2248]'
                     : 'border-transparent text-slate-500 hover:text-slate-800'
                 }`}
               >
@@ -1069,9 +1069,9 @@ export default function App() {
 
               <button
                 onClick={() => setRegressionTab('plots')}
-                className={`py-3 text-xs font-bold border-b-2 transition flex items-center gap-1.5 whitespace-nowrap ${
+                className={`py-3 text-xs font-bold border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${
                   regressionTab === 'plots'
-                    ? 'border-blue-600 text-blue-600'
+                    ? 'border-[#0F2248] text-[#0F2248]'
                     : 'border-transparent text-slate-500 hover:text-slate-800'
                 }`}
               >
@@ -1081,9 +1081,9 @@ export default function App() {
 
               <button
                 onClick={() => setRegressionTab('coefficients')}
-                className={`py-3 text-xs font-bold border-b-2 transition flex items-center gap-1.5 whitespace-nowrap ${
+                className={`py-3 text-xs font-bold border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${
                   regressionTab === 'coefficients'
-                    ? 'border-blue-600 text-blue-600'
+                    ? 'border-[#0F2248] text-[#0F2248]'
                     : 'border-transparent text-slate-500 hover:text-slate-800'
                 }`}
               >
@@ -1093,9 +1093,9 @@ export default function App() {
 
               <button
                 onClick={() => setRegressionTab('residuals')}
-                className={`py-3 text-xs font-bold border-b-2 transition flex items-center gap-1.5 whitespace-nowrap ${
+                className={`py-3 text-xs font-bold border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${
                   regressionTab === 'residuals'
-                    ? 'border-blue-600 text-blue-600'
+                    ? 'border-[#0F2248] text-[#0F2248]'
                     : 'border-transparent text-slate-500 hover:text-slate-800'
                 }`}
               >
@@ -1160,13 +1160,13 @@ export default function App() {
                     })}
                   </div>
 
-                  {/* Simulator Result Output Card */}
-                  <div className="mt-6 p-5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg shadow-blue-500/10">
+                  {/* Simulator Result Output Card - Navy Theme */}
+                  <div className="mt-6 p-5 bg-gradient-to-r from-[#071329] via-[#0E2044] to-[#163366] rounded-xl text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg shadow-blue-950/25 border border-blue-900/50">
                     <div>
-                      <span className="text-xs font-semibold text-blue-200 uppercase tracking-wider">
+                      <span className="text-xs font-semibold text-sky-200 uppercase tracking-wider">
                         Predicted {modelResult.targetVariable}
                       </span>
-                      <div className="text-3xl font-black tracking-tight">
+                      <div className="text-3xl font-black tracking-tight text-white">
                         {simulatedPrediction !== null
                           ? simulatedPrediction < 1000
                             ? simulatedPrediction.toFixed(3)
